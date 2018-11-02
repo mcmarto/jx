@@ -177,7 +177,7 @@ func (o *CreateVaultOptions) createVaultGKE(vaultName string) error {
 	if err != nil {
 		return errors.Wrap(err, "creating KMS configuration")
 	}
-	log.Infof("KMS Key %s created in keying %s\n", util.ColorInfo(kmsConfig.key), util.ColorInfo(kmsConfig.keyring))
+	log.Infof("KMS Key %s created in keyring %s\n", util.ColorInfo(kmsConfig.key), util.ColorInfo(kmsConfig.keyring))
 
 	vaultBucket, err := o.createVaultBucket(vaultName)
 	if err != nil {
